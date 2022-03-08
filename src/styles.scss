@@ -1,29 +1,45 @@
 @import 'scss/reset';
 @import 'scss/base';
+@import 'scss/color';
 
 body {
-  padding: 32px;
+  background-color: $dark-blue;
+  padding: 15px;
 }
 
-.hero {
-  height: 100%;
-  background: antiquewhite;
+.card {
+
+  background-color: $dark-grayish-blue;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
+  padding: 10px;
   align-items: center;
-  justify-content: center;
-  border-radius: 10px;
+  position: relative;
 
-  h1 {
-    font-size: calc(54vw * 100 / 1440);
-    margin-bottom: calc(12vw * 100 / 1440);
+  &-header {
+    color: $neon-green;
+    letter-spacing: 0.5em;
+    font-size: 14px;
   }
 
-  p {
-    font-size: calc(24vw * 100 / 1440);
+  &-body {
+    color: $light-cyan;
+    margin: 1em 0;
   }
-}
 
-a {
-  text-decoration: underline;
+  &-separator {
+    margin: 2em 0;
+  }
+
+  &-action {
+    position: absolute;
+    bottom: -32px;
+
+    button {
+      background-color: $neon-green;
+      padding: 20px;
+      border-radius: 50%;
+    }
+  }
 }
